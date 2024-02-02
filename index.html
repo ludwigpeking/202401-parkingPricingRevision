@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web App Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="./image/logo-01.png" alt="logo" />
+      </div>
+      <div class="nav-buttons">
+        <button class="nav-btn">Load Scheme</button>
+        <button class="nav-btn">Save Scheme</button>
+        <button class="nav-btn">Load Image and Process</button>
+        <button class="nav-btn">Bidding Simulation</button>
+        <button class="nav-btn">Sales Control Area Selection</button>
+      </div>
+    </div>
+    <div class="second-row">
+      <input type="checkbox" id="B1" name="B1" /><label for="B1">B1</label>
+      <input type="checkbox" id="B2" name="B2" /><label for="B2">B2</label>
+      <input
+        type="checkbox"
+        id="moreFloors"
+        name="moreFloors"
+        onclick="toggleB3()"
+      /><label for="moreFloors">More Floors</label>
+      <button id="B3" class="nav-btn" style="display: none">B3</button>
+    </div>
+    <div class="third-row">
+      <input
+        type="checkbox"
+        id="salesControlMode"
+        name="salesControlMode"
+      /><label for="salesControlMode">Sales Control Mode On</label>
+    </div>
+    <div class="content-area">
+      <div class="left-panel">Information</div>
+      <canvas id="canvasArea"></canvas>
+      <div class="right-panel">Sales Scheme</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
